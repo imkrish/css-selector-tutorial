@@ -1,0 +1,30 @@
+/* All of the elements in #ontainer */
+#container * {
+    margin: 0;
+    padding: 0;
+}
+
+/* Class */
+.error {
+    color: red;
+}
+
+/* All of the a elements which are in a */
+li a {
+    text-decoration: none;
+    color: orange;
+}
+
+/* Hasn't been clicked */
+a:link {
+    color: red;
+}
+/* Has been clicked */
+a:visited {
+    color: green;
+}
+
+/* .two must be after .one (after not in!) */
+.one + .two {
+    color: orange;
+}
