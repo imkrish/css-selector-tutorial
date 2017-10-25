@@ -47,3 +47,123 @@ input[data-name] {
 input[data-name="name"] {
     color: blue;
 }
+
+/* .*tutus.* */
+a[href*="tuts"] {
+    color: #1f6053;
+}
+/* start with http */
+a[href^="http"] {
+    padding-left: 10px;
+}
+ /* end with .jpg */
+a[href$=".jpg"] {
+    color: red;
+}
+
+/* data-info="external image" (~ -> get value spliting by space ) */
+/* Target data-info attr that contains the value "external" */
+a[data-info~="external"] {
+    color: red;
+}
+/* And which contain the value "image" */
+a[data-info~="image"] {
+    border: 1px solid black;
+}
+
+/* radio button or checkbox */
+input[type=radio]:checked {
+    border: 1px solid black;
+}
+
+/* :after */
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+}
+ 
+.clearfix { 
+    *display: inline-block; 
+    _height: 1%;
+}
+
+/* on hover */
+div:hover {
+    background: #e3e3e3;
+}
+
+/* :not */
+/* Select all of div elements but not the one which has id container */
+div:not(#container) {
+    color: blue;
+}
+/* Select all of the element, except for paragraph tag */
+*:not(p) {
+    color: green;
+}
+
+/* X::pseudoElement */
+p::first-line {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+p::first-letter {
+    float: left;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: cursive;
+    padding-right: 2px;
+}
+
+/* this is not zero-based. If you wish to target the second list item, use li:nth-child(2). */
+li:nth-child(3) {
+    color: red;
+}
+
+/* X:nth-last-child(n) */
+li:nth-last-child(2) {
+    color: red;
+}
+
+/* X:nth-of-type(n) */
+/* If you wanted to style only the third ul */
+ul:nth-of-type(3) {
+    border: 1px solid black;
+}
+/* X:nth-last-of-type(n) */
+ul:nth-last-of-type(3) {
+    border: 1px solid black;
+}
+
+/* X:first-child */
+ul li:first-child {
+   border-top: none;
+}
+
+/* X:last-child */
+ul > li:last-child {
+    color: green;
+}
+
+/* X:only-child */
+/* only the paragraph that is the only child of the div will be colored, red. */
+div p:only-child {
+   color: red;
+}
+
+
+/* X:only-of-type */
+/* target li, which is an only li type in ul. */
+ul > li:only-of-type {
+    font-weight: bold;
+}
+
+/* X:first-of-type */
+ul:first-of-type li:nth-last-child(1) {
+    font-weight: bold;   
+}
