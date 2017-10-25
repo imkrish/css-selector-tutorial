@@ -28,3 +28,22 @@ a:visited {
 .one + .two {
     color: orange;
 }
+
+/* will target only the direct children of <div id="container"> */
+div#container > ul {
+    border: 1px solid black;
+}
+
+/* all of the elements in the same level with sibling 1 (but only after sibling 1) */
+.sibling1 ~ .sibling2 {
+    color: green;
+}
+
+/* attribute selector */
+input[data-name] {
+    color: green;
+}
+
+input[data-name="name"] {
+    color: blue;
+}
